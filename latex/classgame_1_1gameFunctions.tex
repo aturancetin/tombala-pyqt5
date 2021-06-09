@@ -1,0 +1,447 @@
+\hypertarget{classgame_1_1gameFunctions}{}\doxysection{game.\+game\+Functions Class Reference}
+\label{classgame_1_1gameFunctions}\index{game.gameFunctions@{game.gameFunctions}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classgame_1_1gameFunctions_a0523d37d0ee95dd39f001b011d3df1a4}{set\+Numbers}} (card1, card2, card1copy, card2copy)
+\item 
+def \mbox{\hyperlink{classgame_1_1gameFunctions_ab458a590b2dbe91b3baa151923d1753d}{pick\+Stamp}} (restart\+Button, end\+Message, player1, player2, bingo\+Array1, bingo\+Array2, stamp\+Array1, stamp\+Array2, picked\+Number, card1, card2, card\+Copy1, card\+Copy2, player\+Score\+Label1, player\+Score\+Label2)
+\item 
+def \mbox{\hyperlink{classgame_1_1gameFunctions_a0957f34d8743b1187f824f76de166e95}{pick\+A\+Number}} (restart\+Button, end\+Message, player1, player2, bag\+\_\+count, bag, picked\+Number, stamp\+Array1, stamp\+Array2, card1, card2, card\+Copy1, card\+Copy2, bingo\+Array1, bingo\+Array2, player\+Score\+Label1, player\+Score\+Label2)
+\item 
+def \mbox{\hyperlink{classgame_1_1gameFunctions_ab7857f50ee8216180ac45c8cc7351800}{check\+Bingo}} (card\+Copy, row)
+\item 
+def \mbox{\hyperlink{classgame_1_1gameFunctions_a247bf1d0773660534caeacaf46457df5}{update\+Score}} (restart\+Button, player\+Score\+Label, bingo\+Array, player\+Name, end\+Message)
+\item 
+def \mbox{\hyperlink{classgame_1_1gameFunctions_ac759b590ee1da5bebbf533100113f5e1}{end\+Game}} (player\+Name, end\+Message, restart\+Button)
+\item 
+def \mbox{\hyperlink{classgame_1_1gameFunctions_a111adc27293eb8f2d7b192c2d91a35a9}{restart}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}The game class that have the functionality of the game \end{DoxyVerb}
+ 
+
+Definition at line 17 of file game.\+py.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgame_1_1gameFunctions_ab7857f50ee8216180ac45c8cc7351800}\label{classgame_1_1gameFunctions_ab7857f50ee8216180ac45c8cc7351800}} 
+\index{game.gameFunctions@{game.gameFunctions}!checkBingo@{checkBingo}}
+\index{checkBingo@{checkBingo}!game.gameFunctions@{game.gameFunctions}}
+\doxysubsubsection{\texorpdfstring{checkBingo()}{checkBingo()}}
+{\footnotesize\ttfamily def game.\+game\+Functions.\+check\+Bingo (\begin{DoxyParamCaption}\item[{}]{card\+Copy,  }\item[{}]{row }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The function that checks bingo for given row.
+
+Syntax : checkBingo(cardCopy, row)
+
+Parameters :
+cardCopy: A copy array of the card which have +100 .
+row: Row number to check bingo.
+
+Returns:
+The function returns a boolean value.\end{DoxyVerb}
+ 
+
+Definition at line 144 of file game.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{144     \textcolor{keyword}{def }checkBingo(cardCopy, row):}
+\DoxyCodeLine{145         \textcolor{stringliteral}{""" The function that checks bingo for given row.}}
+\DoxyCodeLine{146 \textcolor{stringliteral}{}}
+\DoxyCodeLine{147 \textcolor{stringliteral}{        Syntax : checkBingo(cardCopy, row)}}
+\DoxyCodeLine{148 \textcolor{stringliteral}{}}
+\DoxyCodeLine{149 \textcolor{stringliteral}{        Parameters :}}
+\DoxyCodeLine{150 \textcolor{stringliteral}{        cardCopy: A copy array of the card which have +100 .}}
+\DoxyCodeLine{151 \textcolor{stringliteral}{        row: Row number to check bingo.}}
+\DoxyCodeLine{152 \textcolor{stringliteral}{}}
+\DoxyCodeLine{153 \textcolor{stringliteral}{        Returns:}}
+\DoxyCodeLine{154 \textcolor{stringliteral}{        The function returns a boolean value.}}
+\DoxyCodeLine{155 \textcolor{stringliteral}{}}
+\DoxyCodeLine{156 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{157         bingo = \textcolor{keyword}{True}}
+\DoxyCodeLine{158         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} cardCopy[row]:}
+\DoxyCodeLine{159             \textcolor{keywordflow}{if} i < 100:}
+\DoxyCodeLine{160                 bingo = \textcolor{keyword}{False}}
+\DoxyCodeLine{161         \textcolor{keywordflow}{return} bingo}
+\DoxyCodeLine{162 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classgame_1_1gameFunctions_ac759b590ee1da5bebbf533100113f5e1}\label{classgame_1_1gameFunctions_ac759b590ee1da5bebbf533100113f5e1}} 
+\index{game.gameFunctions@{game.gameFunctions}!endGame@{endGame}}
+\index{endGame@{endGame}!game.gameFunctions@{game.gameFunctions}}
+\doxysubsubsection{\texorpdfstring{endGame()}{endGame()}}
+{\footnotesize\ttfamily def game.\+game\+Functions.\+end\+Game (\begin{DoxyParamCaption}\item[{}]{player\+Name,  }\item[{}]{end\+Message,  }\item[{}]{restart\+Button }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The function that ends the game.
+
+Syntax : endGame(playerName, endMessage, restartButton)
+
+Parameters :
+playerName: The UI element which shows the name of given player.
+endMessage: The UI element who is responsible to show end message to the user.
+restartButton: The UI element who is responsible to restart the game.
+
+Returns:
+The function does not return anything.\end{DoxyVerb}
+ 
+
+Definition at line 193 of file game.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{193     \textcolor{keyword}{def }endGame(playerName, endMessage, restartButton):}
+\DoxyCodeLine{194         \textcolor{stringliteral}{""" The function that ends the game.}}
+\DoxyCodeLine{195 \textcolor{stringliteral}{}}
+\DoxyCodeLine{196 \textcolor{stringliteral}{        Syntax : endGame(playerName, endMessage, restartButton)}}
+\DoxyCodeLine{197 \textcolor{stringliteral}{}}
+\DoxyCodeLine{198 \textcolor{stringliteral}{        Parameters :}}
+\DoxyCodeLine{199 \textcolor{stringliteral}{        playerName: The UI element which shows the name of given player.}}
+\DoxyCodeLine{200 \textcolor{stringliteral}{        endMessage: The UI element who is responsible to show end message to the user.}}
+\DoxyCodeLine{201 \textcolor{stringliteral}{        restartButton: The UI element who is responsible to restart the game.}}
+\DoxyCodeLine{202 \textcolor{stringliteral}{}}
+\DoxyCodeLine{203 \textcolor{stringliteral}{        Returns:}}
+\DoxyCodeLine{204 \textcolor{stringliteral}{        The function does not return anything.}}
+\DoxyCodeLine{205 \textcolor{stringliteral}{}}
+\DoxyCodeLine{206 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{207         endMessage.setInformativeText(}
+\DoxyCodeLine{208             f\textcolor{stringliteral}{"\{playerName.text()\} Won !"})  \textcolor{comment}{\# inform the user about the winning player}}
+\DoxyCodeLine{209         endMessage.exec\_()}
+\DoxyCodeLine{210         restartButton.raise\_()}
+\DoxyCodeLine{211 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classgame_1_1gameFunctions_a0957f34d8743b1187f824f76de166e95}\label{classgame_1_1gameFunctions_a0957f34d8743b1187f824f76de166e95}} 
+\index{game.gameFunctions@{game.gameFunctions}!pickANumber@{pickANumber}}
+\index{pickANumber@{pickANumber}!game.gameFunctions@{game.gameFunctions}}
+\doxysubsubsection{\texorpdfstring{pickANumber()}{pickANumber()}}
+{\footnotesize\ttfamily def game.\+game\+Functions.\+pick\+A\+Number (\begin{DoxyParamCaption}\item[{}]{restart\+Button,  }\item[{}]{end\+Message,  }\item[{}]{player1,  }\item[{}]{player2,  }\item[{}]{bag\+\_\+count,  }\item[{}]{bag,  }\item[{}]{picked\+Number,  }\item[{}]{stamp\+Array1,  }\item[{}]{stamp\+Array2,  }\item[{}]{card1,  }\item[{}]{card2,  }\item[{}]{card\+Copy1,  }\item[{}]{card\+Copy2,  }\item[{}]{bingo\+Array1,  }\item[{}]{bingo\+Array2,  }\item[{}]{player\+Score\+Label1,  }\item[{}]{player\+Score\+Label2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The function that pick and remove randomly picked number from the bag and runs pickStamp function.
+
+Syntax : pickANumber(restartButton, endMessage, player1, player2, bag_count, bag, pickedNumber, stampArray1, stampArray2, card1, card2, cardCopy1, cardCopy2, bingoArray1, bingoArray2, playerScoreLabel1, playerScoreLabel2)
+
+Parameters :
+restartButton: The UI element who is responsible to restart the game.
+endMessage: The UI element who is responsible to show end message to the user.
+player1: The UI element which shows the name of player 1.
+player2: The UI element which shows the name of player 2.
+bag_count: The UI element which shows the number of left numbers in the bag.
+bag: A list of numbers from 1 to 90 which is initially generated by the UI class.
+pickedNumber: The UI element which shows the picked number which is chosen randomly from the bag.
+stampArray1: An array of UI elements which consists of stamps for first card.
+stampArray2: An array of UI elements which consists of stamps for second card.
+card1: An array of size (3,5) which consist of labels for player 1 card numbers.
+card2: An array of size (3,5) which consist of labels for player 2 card numbers.
+cardCopy1: A copy array card1 array.
+cardCopy2: A copy array card2 array.
+bingoArray1: An array of UI elements which holds bingo icons for player 1.
+bingoArray2: An array of UI elements which holds bingo icons for player 2.
+playerScoreLabel1: The UI element which shows the score of player 1.
+playerScoreLabel2: The UI element which shows the score of player 2.
+
+Returns:
+The function does not return anything.\end{DoxyVerb}
+ 
+
+Definition at line 106 of file game.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106     \textcolor{keyword}{def }pickANumber(restartButton, endMessage, player1, player2, bag\_count, bag, pickedNumber, stampArray1, stampArray2, card1, card2, cardCopy1, cardCopy2, bingoArray1, bingoArray2, playerScoreLabel1, playerScoreLabel2):}
+\DoxyCodeLine{107         \textcolor{stringliteral}{""" The function that pick and remove randomly picked number from the bag and runs pickStamp function.}}
+\DoxyCodeLine{108 \textcolor{stringliteral}{}}
+\DoxyCodeLine{109 \textcolor{stringliteral}{        Syntax : pickANumber(restartButton, endMessage, player1, player2, bag\_count, bag, pickedNumber, stampArray1, stampArray2, card1, card2, cardCopy1, cardCopy2, bingoArray1, bingoArray2, playerScoreLabel1, playerScoreLabel2)}}
+\DoxyCodeLine{110 \textcolor{stringliteral}{}}
+\DoxyCodeLine{111 \textcolor{stringliteral}{        Parameters :}}
+\DoxyCodeLine{112 \textcolor{stringliteral}{        restartButton: The UI element who is responsible to restart the game.}}
+\DoxyCodeLine{113 \textcolor{stringliteral}{        endMessage: The UI element who is responsible to show end message to the user.}}
+\DoxyCodeLine{114 \textcolor{stringliteral}{        player1: The UI element which shows the name of player 1.}}
+\DoxyCodeLine{115 \textcolor{stringliteral}{        player2: The UI element which shows the name of player 2.}}
+\DoxyCodeLine{116 \textcolor{stringliteral}{        bag\_count: The UI element which shows the number of left numbers in the bag.}}
+\DoxyCodeLine{117 \textcolor{stringliteral}{        bag: A list of numbers from 1 to 90 which is initially generated by the UI class.}}
+\DoxyCodeLine{118 \textcolor{stringliteral}{        pickedNumber: The UI element which shows the picked number which is chosen randomly from the bag.}}
+\DoxyCodeLine{119 \textcolor{stringliteral}{        stampArray1: An array of UI elements which consists of stamps for first card.}}
+\DoxyCodeLine{120 \textcolor{stringliteral}{        stampArray2: An array of UI elements which consists of stamps for second card.}}
+\DoxyCodeLine{121 \textcolor{stringliteral}{        card1: An array of size (3,5) which consist of labels for player 1 card numbers.}}
+\DoxyCodeLine{122 \textcolor{stringliteral}{        card2: An array of size (3,5) which consist of labels for player 2 card numbers.}}
+\DoxyCodeLine{123 \textcolor{stringliteral}{        cardCopy1: A copy array card1 array.}}
+\DoxyCodeLine{124 \textcolor{stringliteral}{        cardCopy2: A copy array card2 array.}}
+\DoxyCodeLine{125 \textcolor{stringliteral}{        bingoArray1: An array of UI elements which holds bingo icons for player 1.}}
+\DoxyCodeLine{126 \textcolor{stringliteral}{        bingoArray2: An array of UI elements which holds bingo icons for player 2.}}
+\DoxyCodeLine{127 \textcolor{stringliteral}{        playerScoreLabel1: The UI element which shows the score of player 1.}}
+\DoxyCodeLine{128 \textcolor{stringliteral}{        playerScoreLabel2: The UI element which shows the score of player 2.}}
+\DoxyCodeLine{129 \textcolor{stringliteral}{}}
+\DoxyCodeLine{130 \textcolor{stringliteral}{        Returns:}}
+\DoxyCodeLine{131 \textcolor{stringliteral}{        The function does not return anything.}}
+\DoxyCodeLine{132 \textcolor{stringliteral}{}}
+\DoxyCodeLine{133 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135         randomNumber = random.choice(bag)  \textcolor{comment}{\# pick a random number from the bag}}
+\DoxyCodeLine{136         \textcolor{comment}{\# display the picked number in the UI}}
+\DoxyCodeLine{137         pickedNumber.setText(str(randomNumber))}
+\DoxyCodeLine{138         bag.remove(randomNumber)  \textcolor{comment}{\# remove the picked number from the bag}}
+\DoxyCodeLine{139         bag\_count.setText(str(f\textcolor{stringliteral}{"\{len(bag)\}/90"}))}
+\DoxyCodeLine{140         bag\_count.raise\_()  \textcolor{comment}{\# display the number of left numbers in the UI}}
+\DoxyCodeLine{141         gameFunctions.pickStamp(restartButton, endMessage, player1, player2, bingoArray1, bingoArray2, stampArray1, stampArray2, pickedNumber,}
+\DoxyCodeLine{142                                 card1, card2, cardCopy1, cardCopy2, playerScoreLabel1, playerScoreLabel2)  \textcolor{comment}{\# pick stamp if the picked number matches with any of the number on the card}}
+\DoxyCodeLine{143 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classgame_1_1gameFunctions_ab458a590b2dbe91b3baa151923d1753d}\label{classgame_1_1gameFunctions_ab458a590b2dbe91b3baa151923d1753d}} 
+\index{game.gameFunctions@{game.gameFunctions}!pickStamp@{pickStamp}}
+\index{pickStamp@{pickStamp}!game.gameFunctions@{game.gameFunctions}}
+\doxysubsubsection{\texorpdfstring{pickStamp()}{pickStamp()}}
+{\footnotesize\ttfamily def game.\+game\+Functions.\+pick\+Stamp (\begin{DoxyParamCaption}\item[{}]{restart\+Button,  }\item[{}]{end\+Message,  }\item[{}]{player1,  }\item[{}]{player2,  }\item[{}]{bingo\+Array1,  }\item[{}]{bingo\+Array2,  }\item[{}]{stamp\+Array1,  }\item[{}]{stamp\+Array2,  }\item[{}]{picked\+Number,  }\item[{}]{card1,  }\item[{}]{card2,  }\item[{}]{card\+Copy1,  }\item[{}]{card\+Copy2,  }\item[{}]{player\+Score\+Label1,  }\item[{}]{player\+Score\+Label2 }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The function that put stamps when the picked number matches with a number in any player card.
+
+Syntax : pickStamp(restartButton, endMessage, player1, player2, bingoArray1, bingoArray2, stampArray1, stampArray2, pickedNumber, card1, card2, cardCopy1, cardCopy2, playerScoreLabel1, playerScoreLabel2)
+
+Parameters :
+restartButton: The UI element who is responsible to restart the game.
+endMessage: The UI element who is responsible to show end message to the user.
+player1: The UI element which shows the name of player 1.
+player2: The UI element which shows the name of player 2.
+bingoArray1: An array of UI elements which holds bingo icons for player 1.
+bingoArray2: An array of UI elements which holds bingo icons for player 2.
+stampArray1: An array of UI elements which consists of stamps for first card.
+stampArray2: An array of UI elements which consists of stamps for second card.
+pickedNumber: The UI element which shows the picked number which is chosen randomly from the bag.
+card1: An array of size (3,5) which consist of labels for player 1 card numbers.
+card2: An array of size (3,5) which consist of labels for player 2 card numbers.
+cardCopy1: A copy array card1 array.
+cardCopy2: A copy array card2 array.
+playerScoreLabel1: The UI element which shows the score of player 1.
+playerScoreLabel2: The UI element which shows the score of player 2.
+
+
+Returns:
+The function does not return anything.\end{DoxyVerb}
+ 
+
+Definition at line 57 of file game.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57     \textcolor{keyword}{def }pickStamp(restartButton, endMessage, player1, player2, bingoArray1, bingoArray2, stampArray1, stampArray2, pickedNumber, card1, card2, cardCopy1, cardCopy2, playerScoreLabel1, playerScoreLabel2):}
+\DoxyCodeLine{58         \textcolor{stringliteral}{""" The function that put stamps when the picked number matches with a number in any player card.}}
+\DoxyCodeLine{59 \textcolor{stringliteral}{}}
+\DoxyCodeLine{60 \textcolor{stringliteral}{        Syntax : pickStamp(restartButton, endMessage, player1, player2, bingoArray1, bingoArray2, stampArray1, stampArray2, pickedNumber, card1, card2, cardCopy1, cardCopy2, playerScoreLabel1, playerScoreLabel2)}}
+\DoxyCodeLine{61 \textcolor{stringliteral}{}}
+\DoxyCodeLine{62 \textcolor{stringliteral}{        Parameters :}}
+\DoxyCodeLine{63 \textcolor{stringliteral}{        restartButton: The UI element who is responsible to restart the game.}}
+\DoxyCodeLine{64 \textcolor{stringliteral}{        endMessage: The UI element who is responsible to show end message to the user.}}
+\DoxyCodeLine{65 \textcolor{stringliteral}{        player1: The UI element which shows the name of player 1.}}
+\DoxyCodeLine{66 \textcolor{stringliteral}{        player2: The UI element which shows the name of player 2.}}
+\DoxyCodeLine{67 \textcolor{stringliteral}{        bingoArray1: An array of UI elements which holds bingo icons for player 1.}}
+\DoxyCodeLine{68 \textcolor{stringliteral}{        bingoArray2: An array of UI elements which holds bingo icons for player 2.}}
+\DoxyCodeLine{69 \textcolor{stringliteral}{        stampArray1: An array of UI elements which consists of stamps for first card.}}
+\DoxyCodeLine{70 \textcolor{stringliteral}{        stampArray2: An array of UI elements which consists of stamps for second card.}}
+\DoxyCodeLine{71 \textcolor{stringliteral}{        pickedNumber: The UI element which shows the picked number which is chosen randomly from the bag.}}
+\DoxyCodeLine{72 \textcolor{stringliteral}{        card1: An array of size (3,5) which consist of labels for player 1 card numbers.}}
+\DoxyCodeLine{73 \textcolor{stringliteral}{        card2: An array of size (3,5) which consist of labels for player 2 card numbers.}}
+\DoxyCodeLine{74 \textcolor{stringliteral}{        cardCopy1: A copy array card1 array.}}
+\DoxyCodeLine{75 \textcolor{stringliteral}{        cardCopy2: A copy array card2 array.}}
+\DoxyCodeLine{76 \textcolor{stringliteral}{        playerScoreLabel1: The UI element which shows the score of player 1.}}
+\DoxyCodeLine{77 \textcolor{stringliteral}{        playerScoreLabel2: The UI element which shows the score of player 2.}}
+\DoxyCodeLine{78 \textcolor{stringliteral}{}}
+\DoxyCodeLine{79 \textcolor{stringliteral}{}}
+\DoxyCodeLine{80 \textcolor{stringliteral}{        Returns:}}
+\DoxyCodeLine{81 \textcolor{stringliteral}{        The function does not return anything.}}
+\DoxyCodeLine{82 \textcolor{stringliteral}{}}
+\DoxyCodeLine{83 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{84         \textcolor{keywordflow}{for} row, arr \textcolor{keywordflow}{in} enumerate(card1):  \textcolor{comment}{\# loop through card1}}
+\DoxyCodeLine{85             \textcolor{keywordflow}{for} i, val \textcolor{keywordflow}{in} enumerate(arr):  \textcolor{comment}{\# loop through each row in card1}}
+\DoxyCodeLine{86                 \textcolor{comment}{\# if the picked number is equal to any number on the row}}
+\DoxyCodeLine{87                 \textcolor{keywordflow}{if} int(pickedNumber.text()) == int(val.text()):}
+\DoxyCodeLine{88                     \textcolor{comment}{\# show the corresponding stamp of the number}}
+\DoxyCodeLine{89                     stampArray1[row][i].raise\_()}
+\DoxyCodeLine{90                     cardCopy1[row][i] = cardCopy1[row][i] + 100}
+\DoxyCodeLine{91                     if(gameFunctions.checkBingo(cardCopy1, row)):  \textcolor{comment}{\# check bingo for corresponding row}}
+\DoxyCodeLine{92                         gameFunctions.updateScore(restartButton, playerScoreLabel1,}
+\DoxyCodeLine{93                                                   bingoArray1, player1, endMessage)  \textcolor{comment}{\# update score of the corresponding player}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95         \textcolor{keywordflow}{for} row, arr \textcolor{keywordflow}{in} enumerate(card2):  \textcolor{comment}{\# loop through card2}}
+\DoxyCodeLine{96             \textcolor{keywordflow}{for} i, val \textcolor{keywordflow}{in} enumerate(arr):  \textcolor{comment}{\# loop through each row in card2}}
+\DoxyCodeLine{97                 \textcolor{comment}{\# if the picked number is equal to any number on the row}}
+\DoxyCodeLine{98                 \textcolor{keywordflow}{if} int(pickedNumber.text()) == int(val.text()):}
+\DoxyCodeLine{99                     \textcolor{comment}{\# show the corresponding stamp of the number}}
+\DoxyCodeLine{100                     stampArray2[row][i].raise\_()}
+\DoxyCodeLine{101                     cardCopy2[row][i] = cardCopy2[row][i] + 100}
+\DoxyCodeLine{102                     if(gameFunctions.checkBingo(cardCopy2, row)):  \textcolor{comment}{\# check bingo for corresponding row}}
+\DoxyCodeLine{103                         gameFunctions.updateScore(restartButton, playerScoreLabel2,}
+\DoxyCodeLine{104                                                   bingoArray2, player2, endMessage)  \textcolor{comment}{\# update score of the corresponding player}}
+\DoxyCodeLine{105 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classgame_1_1gameFunctions_a111adc27293eb8f2d7b192c2d91a35a9}\label{classgame_1_1gameFunctions_a111adc27293eb8f2d7b192c2d91a35a9}} 
+\index{game.gameFunctions@{game.gameFunctions}!restart@{restart}}
+\index{restart@{restart}!game.gameFunctions@{game.gameFunctions}}
+\doxysubsubsection{\texorpdfstring{restart()}{restart()}}
+{\footnotesize\ttfamily def game.\+game\+Functions.\+restart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The function that restarts the game.
+
+Syntax : restart()
+
+Parameters :
+The function does not receive any parameter.
+
+Returns:
+The function does not return anything.\end{DoxyVerb}
+ 
+
+Definition at line 212 of file game.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{212     \textcolor{keyword}{def }restart():}
+\DoxyCodeLine{213         \textcolor{stringliteral}{""" The function that restarts the game.}}
+\DoxyCodeLine{214 \textcolor{stringliteral}{}}
+\DoxyCodeLine{215 \textcolor{stringliteral}{        Syntax : restart()}}
+\DoxyCodeLine{216 \textcolor{stringliteral}{}}
+\DoxyCodeLine{217 \textcolor{stringliteral}{        Parameters :}}
+\DoxyCodeLine{218 \textcolor{stringliteral}{        The function does not receive any parameter.}}
+\DoxyCodeLine{219 \textcolor{stringliteral}{}}
+\DoxyCodeLine{220 \textcolor{stringliteral}{        Returns:}}
+\DoxyCodeLine{221 \textcolor{stringliteral}{        The function does not return anything.}}
+\DoxyCodeLine{222 \textcolor{stringliteral}{}}
+\DoxyCodeLine{223 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{224         QtCore.QCoreApplication.quit()}
+\DoxyCodeLine{225         status = QtCore.QProcess.startDetached(sys.executable, sys.argv)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classgame_1_1gameFunctions_a0523d37d0ee95dd39f001b011d3df1a4}\label{classgame_1_1gameFunctions_a0523d37d0ee95dd39f001b011d3df1a4}} 
+\index{game.gameFunctions@{game.gameFunctions}!setNumbers@{setNumbers}}
+\index{setNumbers@{setNumbers}!game.gameFunctions@{game.gameFunctions}}
+\doxysubsubsection{\texorpdfstring{setNumbers()}{setNumbers()}}
+{\footnotesize\ttfamily def game.\+game\+Functions.\+set\+Numbers (\begin{DoxyParamCaption}\item[{}]{card1,  }\item[{}]{card2,  }\item[{}]{card1copy,  }\item[{}]{card2copy }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The function that generates numbers for player cards.
+setNumbers function receives card1 and card2 arrays which consist of the labels for corresponding places.
+Also, it takes two empty numpy array to copy card1 and card2 array for later use.
+The function generates number for cards and assigns them to corresponding location. 
+Then it shows generated numbers on the player cards.
+
+Syntax : setNumbers(card1, card2, card1copy, card2copy)
+
+Parameters :
+card1: An array of size (3,5) which consist of labels for player 1 card numbers.
+card2: An array of size (3,5) which consist of labels for player 2 card numbers.
+card1copy: An array of size (3,5) which consist of all zeros.
+card2copy: An array of size (3,5) which consist of all zeros.
+
+Returns:
+The function does not return anything.\end{DoxyVerb}
+ 
+
+Definition at line 20 of file game.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20     \textcolor{keyword}{def }setNumbers(card1, card2, card1copy, card2copy):}
+\DoxyCodeLine{21         \textcolor{stringliteral}{""" The function that generates numbers for player cards.}}
+\DoxyCodeLine{22 \textcolor{stringliteral}{        setNumbers function receives card1 and card2 arrays which consist of the labels for corresponding places.}}
+\DoxyCodeLine{23 \textcolor{stringliteral}{        Also, it takes two empty numpy array to copy card1 and card2 array for later use.}}
+\DoxyCodeLine{24 \textcolor{stringliteral}{        The function generates number for cards and assigns them to corresponding location. }}
+\DoxyCodeLine{25 \textcolor{stringliteral}{        Then it shows generated numbers on the player cards.}}
+\DoxyCodeLine{26 \textcolor{stringliteral}{}}
+\DoxyCodeLine{27 \textcolor{stringliteral}{        Syntax : setNumbers(card1, card2, card1copy, card2copy)}}
+\DoxyCodeLine{28 \textcolor{stringliteral}{}}
+\DoxyCodeLine{29 \textcolor{stringliteral}{        Parameters :}}
+\DoxyCodeLine{30 \textcolor{stringliteral}{        card1: An array of size (3,5) which consist of labels for player 1 card numbers.}}
+\DoxyCodeLine{31 \textcolor{stringliteral}{        card2: An array of size (3,5) which consist of labels for player 2 card numbers.}}
+\DoxyCodeLine{32 \textcolor{stringliteral}{        card1copy: An array of size (3,5) which consist of all zeros.}}
+\DoxyCodeLine{33 \textcolor{stringliteral}{        card2copy: An array of size (3,5) which consist of all zeros.}}
+\DoxyCodeLine{34 \textcolor{stringliteral}{}}
+\DoxyCodeLine{35 \textcolor{stringliteral}{        Returns:}}
+\DoxyCodeLine{36 \textcolor{stringliteral}{        The function does not return anything.}}
+\DoxyCodeLine{37 \textcolor{stringliteral}{}}
+\DoxyCodeLine{38 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{39         card1\_numbers = np.random.choice(}
+\DoxyCodeLine{40             np.arange(1, 91), replace=\textcolor{keyword}{False}, size=(3, 5))}
+\DoxyCodeLine{41         card2\_numbers = np.random.choice(}
+\DoxyCodeLine{42             np.arange(1, 91), replace=\textcolor{keyword}{False}, size=(3, 5))  \textcolor{comment}{\# generate a numpy array with a size of (3,5) in range (1, 91)}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(3):  \textcolor{comment}{\# loop through each row}}
+\DoxyCodeLine{45             card1\_numbers[i].sort()}
+\DoxyCodeLine{46             card2\_numbers[i].sort()  \textcolor{comment}{\# sort each row of card in ascending order}}
+\DoxyCodeLine{47             \textcolor{keywordflow}{for} j \textcolor{keywordflow}{in} range(5):  \textcolor{comment}{\# loop through each number}}
+\DoxyCodeLine{48                 card1copy[i][j] = card1\_numbers[i][j]}
+\DoxyCodeLine{49                 \textcolor{comment}{\# copy generated card numbers for later use}}
+\DoxyCodeLine{50                 card2copy[i][j] = card2\_numbers[i][j]}
+\DoxyCodeLine{51                 card1[i][j].setText(str(card1\_numbers[i][j]))}
+\DoxyCodeLine{52                 \textcolor{comment}{\# Set generated number to corresponding UI element}}
+\DoxyCodeLine{53                 card2[i][j].setText(str(card2\_numbers[i][j]))}
+\DoxyCodeLine{54                 card1[i][j].raise\_()}
+\DoxyCodeLine{55                 card2[i][j].raise\_()}
+\DoxyCodeLine{56 }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classgame_1_1gameFunctions_a247bf1d0773660534caeacaf46457df5}\label{classgame_1_1gameFunctions_a247bf1d0773660534caeacaf46457df5}} 
+\index{game.gameFunctions@{game.gameFunctions}!updateScore@{updateScore}}
+\index{updateScore@{updateScore}!game.gameFunctions@{game.gameFunctions}}
+\doxysubsubsection{\texorpdfstring{updateScore()}{updateScore()}}
+{\footnotesize\ttfamily def game.\+game\+Functions.\+update\+Score (\begin{DoxyParamCaption}\item[{}]{restart\+Button,  }\item[{}]{player\+Score\+Label,  }\item[{}]{bingo\+Array,  }\item[{}]{player\+Name,  }\item[{}]{end\+Message }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}The function that updates the player score and end the game if any player wins.
+
+Syntax : updateScore(restartButton, playerScoreLabel, bingoArray, playerName, endMessage)
+
+Parameters :
+restartButton: The UI element who is responsible to restart the game.
+playerScoreLabel: The UI element which shows the score of given player.
+bingoArray: An array of UI elements which holds bingo icons for given player.
+playerName: The UI element which shows the name of given player.
+endMessage: The UI element who is responsible to show end message to the user.
+
+Returns:
+The function does not return anything.\end{DoxyVerb}
+ 
+
+Definition at line 163 of file game.\+py.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163     \textcolor{keyword}{def }updateScore(restartButton, playerScoreLabel, bingoArray, playerName, endMessage):}
+\DoxyCodeLine{164         \textcolor{stringliteral}{""" The function that updates the player score and end the game if any player wins.}}
+\DoxyCodeLine{165 \textcolor{stringliteral}{}}
+\DoxyCodeLine{166 \textcolor{stringliteral}{        Syntax : updateScore(restartButton, playerScoreLabel, bingoArray, playerName, endMessage)}}
+\DoxyCodeLine{167 \textcolor{stringliteral}{}}
+\DoxyCodeLine{168 \textcolor{stringliteral}{        Parameters :}}
+\DoxyCodeLine{169 \textcolor{stringliteral}{        restartButton: The UI element who is responsible to restart the game.}}
+\DoxyCodeLine{170 \textcolor{stringliteral}{        playerScoreLabel: The UI element which shows the score of given player.}}
+\DoxyCodeLine{171 \textcolor{stringliteral}{        bingoArray: An array of UI elements which holds bingo icons for given player.}}
+\DoxyCodeLine{172 \textcolor{stringliteral}{        playerName: The UI element which shows the name of given player.}}
+\DoxyCodeLine{173 \textcolor{stringliteral}{        endMessage: The UI element who is responsible to show end message to the user.}}
+\DoxyCodeLine{174 \textcolor{stringliteral}{}}
+\DoxyCodeLine{175 \textcolor{stringliteral}{        Returns:}}
+\DoxyCodeLine{176 \textcolor{stringliteral}{        The function does not return anything.}}
+\DoxyCodeLine{177 \textcolor{stringliteral}{}}
+\DoxyCodeLine{178 \textcolor{stringliteral}{        """}}
+\DoxyCodeLine{179         player = int(playerScoreLabel.text())}
+\DoxyCodeLine{180         \textcolor{keywordflow}{if} player == 0:}
+\DoxyCodeLine{181             player = player + 10}
+\DoxyCodeLine{182             bingoArray[0].raise\_()}
+\DoxyCodeLine{183         \textcolor{keywordflow}{elif} player == 10:}
+\DoxyCodeLine{184             player = player + 20}
+\DoxyCodeLine{185             bingoArray[1].raise\_()}
+\DoxyCodeLine{186         \textcolor{keywordflow}{elif} player == 30:}
+\DoxyCodeLine{187             player = player + 40}
+\DoxyCodeLine{188             bingoArray[2].raise\_()}
+\DoxyCodeLine{189             gameFunctions.endGame(playerName, endMessage,}
+\DoxyCodeLine{190                                   restartButton)  \textcolor{comment}{\# end the game}}
+\DoxyCodeLine{191         playerScoreLabel.setText(str(player))  \textcolor{comment}{\# display player's updated score}}
+\DoxyCodeLine{192 }
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+game.\+py\end{DoxyCompactItemize}

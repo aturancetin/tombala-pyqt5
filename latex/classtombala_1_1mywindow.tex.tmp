@@ -1,0 +1,34 @@
+\hypertarget{classtombala_1_1mywindow}{}\doxysection{tombala.\+mywindow Class Reference}
+\label{classtombala_1_1mywindow}\index{tombala.mywindow@{tombala.mywindow}}
+
+
+Inheritance diagram for tombala.\+mywindow\+:
+% FIG 0
+
+
+Collaboration diagram for tombala.\+mywindow\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtombala_1_1mywindow_a14272f240ee16cf415e5b250f9ac4ae1}\label{classtombala_1_1mywindow_a14272f240ee16cf415e5b250f9ac4ae1}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classtombala_1_1mywindow_a0729463e28d7480368f9c2be75405b50}\label{classtombala_1_1mywindow_a0729463e28d7480368f9c2be75405b50}} 
+{\bfseries ui}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 20 of file tombala.\+py.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+tombala.\+py\end{DoxyCompactItemize}
