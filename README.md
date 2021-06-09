@@ -2,6 +2,7 @@
 
 The aim of this project is to develop a bingo game with Python and Qt Designer. <br/>
 Qt Designer is used to generate Python code from designed user interface.
+See the source code in <a href="https://github.com/aturancetin/tombala-pyqt5">Github</a>
 
 ## Dependencies
 
